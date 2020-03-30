@@ -5,11 +5,11 @@ var HoneyMakerBee = function() {
   this.honeyPot = 0;
 };
 
-HoneyMakerBee.prototpye = Object.create(Bee.prototpye);
-HoneyMakerBee.prototpye.constructor = HoneyMakerBee;
-HoneyMakerBee.prototpye.makeHoney = function() {
+HoneyMakerBee.prototype = Object.create(Bee.prototype);
+HoneyMakerBee.prototype.constructor = HoneyMakerBee;
+HoneyMakerBee.prototype.makeHoney = function() {
   this.honeyPot += 1;
 }
-HoneyMakerBee.prototpye.giveHoney = function() {
+HoneyMakerBee.prototype.giveHoney = function() {
   this.honeyPot -= 1;
 }
